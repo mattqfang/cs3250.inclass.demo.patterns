@@ -21,4 +21,16 @@ public class BinaryHandler implements FileHandler {
 	public FileHandler next() {
 		return new CSVHandler();
 	}
+	
+	//-------------------------functional programming------------
+	
+	@Override
+	public boolean canOpen(String filename) {
+		return filename.endsWith(".bin");
+	}
+	
+	@Override
+	public void openUsingFP(String filename) {
+		System.out.println("opening binary ...");
+	}
 }

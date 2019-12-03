@@ -21,4 +21,16 @@ public class TextHandler implements FileHandler {
 	public FileHandler next() {
 		return new BinaryHandler();
 	}
+	
+	//-------------------------functional programming------------
+	
+		@Override
+		public boolean canOpen(String filename) {
+			return filename.endsWith(".txt");
+		}
+		
+		@Override
+		public void openUsingFP(String filename) {
+			System.out.println("opening text ...");
+		}
 }

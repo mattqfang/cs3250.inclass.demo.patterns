@@ -22,4 +22,16 @@ public class CSVHandler implements FileHandler {
 	public FileHandler next() {
 		return null;
 	}
+	
+	//-------------------------functional programming------------
+	
+		@Override
+		public boolean canOpen(String filename) {
+			return filename.endsWith(".csv");
+		}
+		
+		@Override
+		public void openUsingFP(String filename) {
+			System.out.println("opening csv ...");
+		}
 }
