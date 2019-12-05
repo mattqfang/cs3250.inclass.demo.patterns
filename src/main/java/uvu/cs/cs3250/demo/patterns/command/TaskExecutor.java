@@ -12,6 +12,12 @@ public class TaskExecutor {
 				new CloseTask(),
 				new EmailTask("notification email sent"));
 		
+		Task task1 = () -> System.out.println("executing task 1");
+		Task task2 = () -> System.out.println("executing task 2");
+		Task task3 = () -> System.out.println("executing task 3");
+		
+		TaskExecutor.run(task1, task2, task3);
+		
 //		TaskExecutor.run(
 //				Stream.<Task>of(new EmailTask("notification email sent"),
 //						new SaveTask("matt sucks"),
